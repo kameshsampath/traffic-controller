@@ -13,7 +13,7 @@ import io.reactivex.Flowable;
 public class RandomTrafficGenerator {
 
     Random random = new Random();
-    @Outgoing("traffic-info")
+    @Outgoing("traffic-info-stream")
     public Flowable<TrafficInfo> generate(){
            return Flowable
            .interval(10, TimeUnit.SECONDS)

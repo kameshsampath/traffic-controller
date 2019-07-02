@@ -17,13 +17,13 @@ public class TrafficSignalResource {
 
     @Inject
     @Stream("traffic-signal-stream")
-    Publisher<TrafficSignalInfo> trafficSignalPublisher;
+    Publisher<String> trafficSignalPublisher;
 
 
     @GET
     @Path("/flow")
     @Produces(MediaType.SERVER_SENT_EVENTS)
-    public Publisher<TrafficSignalInfo> trafficFlow() {
+    public Publisher<String> trafficFlow() {
         return trafficSignalPublisher;
     }
 }
