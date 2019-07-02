@@ -16,7 +16,9 @@ public class TrafficTimeoutComputer {
     @Outgoing("traffic-signal-stream")
     @Broadcast
     public TrafficSignalInfo generateTimeout(TrafficInfo trafficInfo) {
-        return new TrafficSignalInfo().build(trafficInfo);
+        TrafficSignalInfo info = new TrafficSignalInfo().build(trafficInfo);
+        System.out.println("Signal : "+info);
+        return info;
     }
 
 }

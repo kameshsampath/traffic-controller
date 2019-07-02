@@ -9,10 +9,10 @@ import org.reactivestreams.Publisher;
 import io.smallrye.reactive.messaging.annotations.Stream;
 
 /**
- * TrafficSignalController
+ * TrafficSignalResource
  */
 @Path("/traffic")
-public class TrafficSignalController {
+public class TrafficSignalResource {
 
 
     @Inject
