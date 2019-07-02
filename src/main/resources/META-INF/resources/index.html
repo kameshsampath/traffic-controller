@@ -19,11 +19,12 @@
     </div>
 </div>
 </body>
+</html>
+
 <script>
     var source = new EventSource("/traffic/flow");
     source.onmessage = function (event) {
         console.log("Event Data:",event.data);
-        $("#content").innerHTML = event.data;
+        $("span#content").innerHTML = event.data;
     };
 </script>
-</html>
