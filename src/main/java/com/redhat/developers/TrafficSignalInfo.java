@@ -64,14 +64,12 @@ public class TrafficSignalInfo {
     }
 
     private int computeTrafficTimeout(int trafficVol) {
-        if (trafficVol > 80) {
-            return 60;
-        } else if (trafficVol > 50
-                && trafficVol < 80) {
-            return 35;
-        } else if (trafficVol <= 30) {
-            return 20;
-        }
+        if (trafficVol > 30) {
+            return 30;
+        } else if (trafficVol > 15
+                && trafficVol < 30) {
+            return 15;
+        } 
         return 10;
     }
 }

@@ -16,14 +16,14 @@ public class RandomTrafficGenerator {
     @Outgoing("traffic-info-stream")
     public Flowable<TrafficInfo> generate(){
            return Flowable
-           .interval(10, TimeUnit.SECONDS)
+           .interval(60, TimeUnit.SECONDS)
            .map(tick -> {
                TrafficInfo trafficInfo = new TrafficInfo();
                trafficInfo.setId("mgroad");
-               trafficInfo.setEasternTraffic(random.nextInt(100));
-               trafficInfo.setWesternTraffic(random.nextInt(100));
-               trafficInfo.setNorthernTraffic(random.nextInt(100));
-               trafficInfo.setSouthernTraffic(random.nextInt(100));
+               trafficInfo.setEasternTraffic(random.nextInt(60));
+               trafficInfo.setWesternTraffic(random.nextInt(60));
+               trafficInfo.setNorthernTraffic(random.nextInt(60));
+               trafficInfo.setSouthernTraffic(random.nextInt(60));
                return trafficInfo;
            });
     }
