@@ -15,41 +15,56 @@
       src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
       defer
     ></script>
-    <script type="application/javascript" src="traffic-signal-control.js"></script>
+    <script
+      type="application/javascript"
+      src="traffic-signal-control.js"
+    ></script>
     <script type="application/javascript" src="streaming.js" defer></script>
   </head>
   <body>
     <div class="container">
       <div class="row align-items-center">
         <div class="col col-lg-2"></div>
-        <div id="sigNorth" class="col circle"></div>
+        <div class="col">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle id="sigNorth" cx="50" cy="50" r="15" />
+          </svg>
+        </div>
         <div class="col col-lg-2"></div>
       </div>
       <div class="row">
-        <div id="sigWest" class="col circle"></div>
+        <div class="col">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle id="sigWest" cx="50" cy="50" r="15" />
+          </svg>
+        </div>
         <div class="col col-lg-2"></div>
-        <div id="sigEast" class="col circle"></div>
+        <div class="col">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle id="sigEast" cx="50" cy="50" r="15" />
+          </svg>
+        </div>
       </div>
       <div class="row align-items-center">
         <div class="col col-lg-2"></div>
-        <div id="sigSouth" class="col circle"></div>
+        <div class="col">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle id="sigSouth" cx="50" cy="50" r="15" />
+          </svg>
+        </div>
         <div class="col col-lg-2"></div>
       </div>
     </div>
   </body>
   <style>
-    .circle:before {
-      content: "\25CF";
-      font-size: 100px;
-    }
     .red {
-      color: var(--danger)
+      fill: var(--danger);
     }
     .amber {
-      color: var(--warning)
+      fill: var(--warning);
     }
     .green {
-      color: var(--success)
+      fill: var(--success);
     }
   </style>
 </html>

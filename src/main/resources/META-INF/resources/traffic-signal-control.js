@@ -80,21 +80,39 @@ stopAllTraffic = () => {
   stopWest();
 };
 
+slowAndStopNS = async () => {
+    slowNorth();
+    slowSouth();
+    await sleep(3);
+    stopNorth();
+    stopSouth();
+    await sleep(2);
+}
+
+slowAndStopEW = async () => {
+    slowEast();
+    slowWest();
+    await sleep(3);
+    stopEast();
+    stopWest();
+    await sleep(2);
+}
+
 slowAllAndStopTraffic = async () => {
     slowAllTraffic();
-    await sleep(5);
+    await sleep(3);
     stopAllTraffic();
-    await sleep(5);
+    await sleep(2);
 }
 
 openEastAndWest = async (e,w) => {
-    await slowAllAndStopTraffic();
+    await slowAndStopNS();
     goEast();
     goWest();
 }
 
 openNorthAndSouth = async (n,s) => {
-    await slowAllAndStopTraffic();
+    await slowAndStopEW();
     goNorth();
     goSouth();
 }
