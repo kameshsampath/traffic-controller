@@ -6,7 +6,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import org.reactivestreams.Publisher;
-import io.smallrye.reactive.messaging.annotations.Stream;
+import io.smallrye.reactive.messaging.annotations.Channel;
 
 /**
  * TrafficSignalResource
@@ -16,7 +16,7 @@ public class TrafficSignalResource {
 
 
     @Inject
-    @Stream("traffic-signal-stream")
+    @Channel("traffic-signal-stream")
     Publisher<String> trafficSignalPublisher;
 
 

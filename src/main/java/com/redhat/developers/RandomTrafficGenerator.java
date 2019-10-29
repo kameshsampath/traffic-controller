@@ -16,7 +16,7 @@ public class RandomTrafficGenerator {
     @Outgoing("traffic-info-stream")
     public Flowable<TrafficInfo> generate(){
            return Flowable
-           .interval(60, TimeUnit.SECONDS)
+           .interval(30, TimeUnit.SECONDS)
            .map(tick -> {
                TrafficInfo trafficInfo = new TrafficInfo();
                trafficInfo.setId("mgroad");
@@ -26,6 +26,5 @@ public class RandomTrafficGenerator {
                trafficInfo.setSouthernTraffic(random.nextInt(60));
                return trafficInfo;
            });
-    }
-    
+    }    
 }
