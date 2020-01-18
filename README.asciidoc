@@ -1,0 +1,29 @@
+= Traffic Controller
+
+A simple demo to show how to simulate a Traffic signal using [Quarkus] [https://quarkus.io] and [Apache Kafka] (https://kafka.apache.org)
+
+== Steps run the demo
+
+video::385671631[viemo]
+
+From your project directory, where you have cloned this project run:
+
+Start Kafka, from a terminal window 
+
+[source,bash,subs="+quotes"]
+---
+$ *docker-compose up*
+----
+
+[source,bash,subs="+quotes"]
+---
+$ *./mvnw clean compile quarkus:dev*
+----
+
+Once both the applications Kafka and Quarkus are running open the URL http://localhost:8080  to the directional traffic dot. Please do keep the window size small to see all the directions.
+
+On the Quarkus logs you should see the some random traffic info being sent by the backend (Kafka)
+and the Traffic signal will change as per the weight of the traffic in each direction. The random traffic signal is generated every 30 seconds.
+
+
+
