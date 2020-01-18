@@ -4,7 +4,7 @@ A simple demo to show how to simulate a Traffic signal using [Quarkus] [https://
 
 == Steps run the demo
 
-video::385671631[viemo]
+Demo Video https://vimeo.com/385671631
 
 From your project directory, where you have cloned this project run:
 
