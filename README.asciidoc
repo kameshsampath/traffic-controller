@@ -1,6 +1,6 @@
 = Traffic Controller
 
-A simple demo to show how to simulate a Traffic signal using [Quarkus] [https://quarkus.io] and [Apache Kafka] (https://kafka.apache.org)
+A simple demo to show how to simulate a Traffic signal using  https://quarkus.io[Quarkus] and https://kafka.apache.org[Apache Kafka ].
 
 == Steps run the demo
 
